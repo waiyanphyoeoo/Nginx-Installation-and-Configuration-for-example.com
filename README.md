@@ -6,7 +6,7 @@ This comprehensive guide will help you install, configure, and secure **Nginx** 
 
 ## **Table of Contents** 📑
 
-1. [**Introduction**](#introduction) 📝  
+1. [**Introduction**](#introduction-) 📝  
 2. [**Steps to Install and Configure Nginx**](#steps-to-install-and-configure-nginx) 🚀  
    - 2.1 [Update System Packages](#update-system-packages) 📦  
    - 2.2 [Install Nginx](#install-nginx) 🔧  

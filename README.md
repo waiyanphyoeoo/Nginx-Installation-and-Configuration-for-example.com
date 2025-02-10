@@ -1,6 +1,6 @@
-# **Nginx Installation and Configuration for phidashexport.com** 🌐🔒
+# **Nginx Installation and Configuration for example.com** 🌐🔒
 
-This comprehensive guide will help you install, configure, and secure **Nginx** for your domain **phidashexport.com**. It includes detailed instructions on setting up server blocks, enabling HTTPS with Let’s Encrypt, and configuring Nginx as a reverse proxy. We’ll also cover optional steps to create a web root directory and test your server.
+This comprehensive guide will help you install, configure, and secure **Nginx** for your domain **example.com**. It includes detailed instructions on setting up server blocks, enabling HTTPS with Let’s Encrypt, and configuring Nginx as a reverse proxy. We’ll also cover optional steps to create a web root directory and test your server.
 
 ---
 
@@ -31,10 +31,10 @@ This comprehensive guide will help you install, configure, and secure **Nginx** 
 
 ## **Introduction** 📝
 
-In this guide, we will walk you through setting up **Nginx** as a reverse proxy for **phidashexport.com**. The instructions will cover the following:
+In this guide, we will walk you through setting up **Nginx** as a reverse proxy for **example.com**. The instructions will cover the following:
 
 - Installing and configuring **Nginx**.
-- Setting up a server block for **phidashexport.com**.
+- Setting up a server block for **example.com**.
 - Configuring **Nginx** as a reverse proxy to forward requests to a backend server.
 - Securing your domain with **HTTPS** using **Let’s Encrypt**.
 - Optionally, creating a web root directory and serving a test page to verify the setup.
@@ -83,22 +83,22 @@ sudo ufw status
 
 ### 2.5 **Create Nginx Server Block** 🖥️
 
-A **server block** (virtual host) tells Nginx how to handle requests for your domain. Let’s create one for **phidashexport.com**.
+A **server block** (virtual host) tells Nginx how to handle requests for your domain. Let’s create one for **example.com**.
 
 ```bash
-sudo nano /etc/nginx/sites-available/phidashexport.com
+sudo nano /etc/nginx/sites-available/example.com
 ```
 
 Add the following configuration to the file:
 
 ```nginx
 server_tokens               off;
-access_log                  /var/log/nginx/phidashexport.access.log;
-error_log                   /var/log/nginx/phidashexport.error.log;
+access_log                  /var/log/nginx/example.com.access.log;
+error_log                   /var/log/nginx/example.com.error.log;
 
 server {
     listen 80;
-    server_name phidashexport.com;
+    server_name example.com;
 
     # Redirect HTTP to HTTPS
     return 301 https://$host$request_uri;
@@ -106,15 +106,15 @@ server {
 
 server {
     listen 443 ssl; # managed by Certbot
-    server_name phidashexport.com;
+    server_name example.com;
 
-    ssl_certificate /etc/letsencrypt/live/phidashexport.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/phidashexport.com/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
     location / {
-        proxy_pass http://localhost:9000;
+        proxy_pass http://localhost:8000;
 
         # Timeouts for reverse proxy connection
         proxy_read_timeout 300s;  # Increase this value as needed
@@ -139,14 +139,14 @@ server {
 This configuration does the following:
 - **HTTP to HTTPS Redirect**: All HTTP traffic is redirected to HTTPS.
 - **SSL Configuration**: Sets up SSL with certificates obtained via **Let’s Encrypt**.
-- **Reverse Proxy**: Forwards incoming requests to the backend running on **localhost:9000**.
+- **Reverse Proxy**: Forwards incoming requests to the backend running on **localhost:8000**.
 
 ### 2.6 **Enable the Server Block** 🔗
 
 After creating the server block, you need to enable it by creating a symbolic link.
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/phidashexport.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 ```
 
 ### 2.7 **Test Nginx Configuration** 🧪
@@ -167,7 +167,7 @@ sudo systemctl reload nginx
 
 ### 2.9 **Test Your Domain** 🌐
 
-Ensure your domain **phidashexport.com** is pointing to your server’s public IP. Test your setup by visiting **http://phidashexport.com** in a web browser.
+Ensure your domain **example.com** is pointing to your server’s public IP. Test your setup by visiting **http://example.com** in a web browser.
 
 ---
 
@@ -187,7 +187,7 @@ sudo apt install certbot python3-certbot-nginx -y
 Now that Certbot is installed, obtain a free SSL certificate for your domain.
 
 ```bash
-sudo certbot --nginx -d phidashexport.com -d www.phidashexport.com
+sudo certbot --nginx -d example.com -d www.example.com
 ```
 
 Certbot will automatically configure SSL for Nginx.
@@ -217,9 +217,9 @@ sudo systemctl reload nginx
 If you plan to serve static files, create a directory for your web root.
 
 ```bash
-sudo mkdir -p /var/www/phidashexport.com
-sudo chown -R $USER:$USER /var/www/phidashexport.com
-sudo chmod -R 755 /var/www/phidashexport.com
+sudo mkdir -p /var/www/example.com
+sudo chown -R $USER:$USER /var/www/example.com
+sudo chmod -R 755 /var/www/example.com
 ```
 
 ### 4.2 **Add a Test HTML Page** 📝
@@ -227,13 +227,13 @@ sudo chmod -R 755 /var/www/phidashexport.com
 Verify your configuration by adding a simple test HTML page:
 
 ```bash
-echo '<html><head><title>Welcome to Phidashexport</title></head><body><h1>Success! Nginx is serving phidashexport.com</h1></body></html>' | sudo tee /var/www/phidashexport.com/index.html
+echo '<html><head><title>Welcome to example.com</title></head><body><h1>Success! Nginx is serving example.com</h1></body></html>' | sudo tee /var/www/example.com/index.html
 ```
 
 ---
 
 ## **Conclusion** 🎉
 
-Congratulations! You’ve successfully installed and configured **Nginx** for your domain **phidashexport.com**, secured it with **Let’s Encrypt**, and set up a reverse proxy. Optional steps like creating a web root directory and adding a test HTML page will help you verify the setup.
+Congratulations! You’ve successfully installed and configured **Nginx** for your domain **example.com**, secured it with **Let’s Encrypt**, and set up a reverse proxy. Optional steps like creating a web root directory and adding a test HTML page will help you verify the setup.
 
 With **Nginx** now running securely on your server, your website is ready to handle traffic efficiently! 😊🌟

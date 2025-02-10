@@ -1,6 +1,7 @@
 # **Nginx Installation and Configuration for example.com** 🌐🔒
-
+<p align="justify">
 This comprehensive guide will help you install, configure, and secure **Nginx** for your domain **example.com**. It includes detailed instructions on setting up server blocks, enabling HTTPS with Let’s Encrypt, and configuring Nginx as a reverse proxy. We’ll also cover optional steps to create a web root directory and test your server.
+</p>
 
 ---
 

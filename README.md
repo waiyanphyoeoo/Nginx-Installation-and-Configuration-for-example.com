@@ -20,7 +20,7 @@ This comprehensive guide will help you install, configure, and secure **Nginx** 
    - 2.9 [Test Your Domain](#29-test-your-domain-) 🌐  
 3. [**SSL Configuration with Let’s Encrypt**](#ssl-configuration-with-lets-encrypt-) 🔒  
    - 3.1 [Install Certbot and Nginx Plugin](#31-install-certbot-and-nginx-plugin-) 🔑  
-   - 3.2 [Obtain an SSL Certificate](#32-obtain-an-ssl-certificate-) 🛡️  
+   - 3.2 [Obtain an SSL Certificate](#32-obtain-an-ssl-certificate-%EF%B8%8F) 🛡️  
    - 3.3 [Test Certificate Renewal](#33-test-certificate-renewal-) 🔄  
    - 3.4 [Reload Nginx with SSL Configuration](#34-reload-nginx-with-ssl-configuration-) 🔁  
 4. [**Optional Steps**](#optional-steps-) 🧑‍💻  

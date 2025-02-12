@@ -8,25 +8,25 @@ This comprehensive guide will help you install, configure, and secure **Nginx** 
 ## **Table of Contents** 📑
 
 1. [**Introduction**](#introduction-) 📝  
-2. [**Steps to Install and Configure Nginx**](#steps-to-install-and-configure-nginx) 🚀  
-   - 2.1 [Update System Packages](#update-system-packages) 📦  
-   - 2.2 [Install Nginx](#install-nginx) 🔧  
-   - 2.3 [Start and Enable Nginx](#start-and-enable-nginx) 🔄  
-   - 2.4 [Configure Firewall to Allow Nginx](#configure-firewall-to-allow-nginx) 🔥  
-   - 2.5 [Create Nginx Server Block](#create-nginx-server-block) 🖥️  
-   - 2.6 [Enable the Server Block](#enable-the-server-block) 🔗  
-   - 2.7 [Test Nginx Configuration](#test-nginx-configuration) 🧪  
-   - 2.8 [Reload Nginx](#reload-nginx) 🔁  
-   - 2.9 [Test Your Domain](#test-your-domain) 🌐  
-3. [**SSL Configuration with Let’s Encrypt**](#ssl-configuration-with-lets-encrypt) 🔒  
-   - 3.1 [Install Certbot and Nginx Plugin](#install-certbot-and-nginx-plugin) 🔑  
-   - 3.2 [Obtain an SSL Certificate](#obtain-an-ssl-certificate) 🛡️  
-   - 3.3 [Test Certificate Renewal](#test-certificate-renewal) 🔄  
-   - 3.4 [Reload Nginx with SSL Configuration](#reload-nginx-with-ssl-configuration) 🔁  
-4. [**Optional Steps**](#optional-steps) 🧑‍💻  
-   - 4.1 [Create the Web Root Directory](#create-the-web-root-directory) 🏁  
-   - 4.2 [Add a Test HTML Page](#add-a-test-html-page) 📝  
-5. [**Conclusion**](#conclusion) 🎉
+2. [**Steps to Install and Configure Nginx**](#steps-to-install-and-configure-nginx-) 🚀  
+   - 2.1 [Update System Packages](#update-system-packages-) 📦  
+   - 2.2 [Install Nginx](#install-nginx-) 🔧  
+   - 2.3 [Start and Enable Nginx](#start-and-enable-nginx-) 🔄  
+   - 2.4 [Configure Firewall to Allow Nginx](#configure-firewall-to-allow-nginx-) 🔥  
+   - 2.5 [Create Nginx Server Block](#create-nginx-server-block-) 🖥️  
+   - 2.6 [Enable the Server Block](#enable-the-server-block-) 🔗  
+   - 2.7 [Test Nginx Configuration](#test-nginx-configuration-) 🧪  
+   - 2.8 [Reload Nginx](#reload-nginx-) 🔁  
+   - 2.9 [Test Your Domain](#test-your-domain-) 🌐  
+3. [**SSL Configuration with Let’s Encrypt**](#ssl-configuration-with-lets-encrypt-) 🔒  
+   - 3.1 [Install Certbot and Nginx Plugin](#install-certbot-and-nginx-plugin-) 🔑  
+   - 3.2 [Obtain an SSL Certificate](#obtain-an-ssl-certificate-) 🛡️  
+   - 3.3 [Test Certificate Renewal](#test-certificate-renewal-) 🔄  
+   - 3.4 [Reload Nginx with SSL Configuration](#reload-nginx-with-ssl-configuration-) 🔁  
+4. [**Optional Steps**](#optional-steps-) 🧑‍💻  
+   - 4.1 [Create the Web Root Directory](#create-the-web-root-directory-) 🏁  
+   - 4.2 [Add a Test HTML Page](#add-a-test-html-page-) 📝  
+5. [**Conclusion**](#conclusion-) 🎉
 
 ---
 

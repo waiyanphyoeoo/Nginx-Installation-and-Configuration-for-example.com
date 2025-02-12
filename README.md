@@ -13,7 +13,7 @@ This comprehensive guide will help you install, configure, and secure **Nginx** 
    - 2.2 [Install Nginx](#22-install-nginx-) 🔧  
    - 2.3 [Start and Enable Nginx](#23-start-and-enable-nginx-) 🔄  
    - 2.4 [Configure Firewall to Allow Nginx](#24-configure-firewall-to-allow-nginx-) 🔥  
-   - 2.5 [Create Nginx Server Block](#25-create-nginx-server-block-) 🖥️  
+   - 2.5 [Create Nginx Server Block](#25-create-nginx-server-block-%EF%B8%8F) 🖥️  
    - 2.6 [Enable the Server Block](#26-enable-the-server-block-) 🔗  
    - 2.7 [Test Nginx Configuration](#27-test-nginx-configuration-) 🧪  
    - 2.8 [Reload Nginx](#28-reload-nginx-) 🔁  

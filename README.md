@@ -19,13 +19,13 @@ This comprehensive guide will help you install, configure, and secure **Nginx** 
    - 2.8 [Reload Nginx](#28-reload-nginx-) 🔁  
    - 2.9 [Test Your Domain](#29-test-your-domain-) 🌐  
 3. [**SSL Configuration with Let’s Encrypt**](#ssl-configuration-with-lets-encrypt-) 🔒  
-   - 3.1 [Install Certbot and Nginx Plugin](#install-certbot-and-nginx-plugin-) 🔑  
-   - 3.2 [Obtain an SSL Certificate](#obtain-an-ssl-certificate-) 🛡️  
-   - 3.3 [Test Certificate Renewal](#test-certificate-renewal-) 🔄  
-   - 3.4 [Reload Nginx with SSL Configuration](#reload-nginx-with-ssl-configuration-) 🔁  
+   - 3.1 [Install Certbot and Nginx Plugin](#31-install-certbot-and-nginx-plugin-) 🔑  
+   - 3.2 [Obtain an SSL Certificate](#32-obtain-an-ssl-certificate-) 🛡️  
+   - 3.3 [Test Certificate Renewal](#33-test-certificate-renewal-) 🔄  
+   - 3.4 [Reload Nginx with SSL Configuration](#34-reload-nginx-with-ssl-configuration-) 🔁  
 4. [**Optional Steps**](#optional-steps-) 🧑‍💻  
-   - 4.1 [Create the Web Root Directory](#create-the-web-root-directory-) 🏁  
-   - 4.2 [Add a Test HTML Page](#add-a-test-html-page-) 📝  
+   - 4.1 [Create the Web Root Directory](#41-create-the-web-root-directory-) 🏁  
+   - 4.2 [Add a Test HTML Page](#42-add-a-test-html-page-) 📝  
 5. [**Conclusion**](#conclusion-) 🎉
 
 ---

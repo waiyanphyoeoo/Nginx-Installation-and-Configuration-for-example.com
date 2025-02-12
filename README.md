@@ -9,7 +9,7 @@ This comprehensive guide will help you install, configure, and secure **Nginx** 
 
 1. [**Introduction**](#introduction-) 📝  
 2. [**Steps to Install and Configure Nginx**](#steps-to-install-and-configure-nginx-) 🚀  
-   - 2.1 [Update System Packages](#update-system-packages-) 📦  
+   - 2.1 [Update System Packages](#21-update-system-packages-) 📦  
    - 2.2 [Install Nginx](#install-nginx-) 🔧  
    - 2.3 [Start and Enable Nginx](#start-and-enable-nginx-) 🔄  
    - 2.4 [Configure Firewall to Allow Nginx](#configure-firewall-to-allow-nginx-) 🔥  
